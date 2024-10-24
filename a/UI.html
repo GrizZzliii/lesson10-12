@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление роботом-пылесосом</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Робот-пылесос - Облачное управление</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#connect">Подключение робота</a></li>
+            <li><a href="#rooms">Управление помещениями</a></li>
+            <li><a href="#schedule">Расписание работы</a></li>
+            <li><a href="#service">Сервисное обслуживание</a></li>
+            <li><a href="#history">История уборок</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="connect">
+            <h2>Подключение робота</h2>
+            <p>Введите данные для подключения к сети:</p>
+            <form id="connect-form">
+                <label for="wifi-ssid">SSID:</label>
+                <input type="text" id="wifi-ssid" name="wifi-ssid" required><br>
+                <label for="wifi-password">Пароль:</label>
+                <input type="password" id="wifi-password" name="wifi-password" required><br>
+                <button type="submit">Подключить</button>
+            </form>
+        </section>
+
+        <section id="rooms">
+            <h2>Управление помещениями</h2>
+            <p>Выберите комнаты для уборки:</p>
+            <form id="rooms-form">
+                <label><input type="checkbox" name="rooms" value="kitchen"> Кухня</label><br>
+                <label><input type="checkbox" name="rooms" value="living-room"> Гостиная</label><br>
+                <label><input type="checkbox" name="rooms" value="bedroom"> Спальня</label><br>
+                <button type="submit">Начать уборку</button>
+            </form>
+        </section>
+
+        <section id="schedule">
+            <h2>Расписание работы</h2>
+            <p>Настройте график работы робота:</p>
+            <form id="schedule-form">
+                <label for="schedule-date">Дата:</label>
+                <input type="date" id="schedule-date" name="schedule-date" required><br>
+                <label for="schedule-time">Время:</label>
+                <input type="time" id="schedule-time" name="schedule-time" required><br>
+                <button type="submit">Сохранить расписание</button>
+            </form>
+        </section>
+
+        <section id="service">
+            <h2>Сервисное обслуживание</h2>
+            <p>Информация о состоянии робота:</p>
+            <ul>
+                <li>Заряд батареи: <span id="battery-status">100%</span></li>
+                <li>Состояние фильтра: <span id="filter-status">Чистый</span></li>
+                <li>Дата последней очистки: <span id="last-service-date">Неизвестно</span></li>
+            </ul>
+        </section>
+
+        <section id="history">
+            <h2>История уборок</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Комнаты</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-10-20</td>
+                        <td>Кухня, Гостиная</td>
+                        <td>Завершено</td>
+                    </tr>
+                    <!-- Дальнейшая история уборок будет добавлена динамически -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Робот-пылесос - Облачное управление</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
